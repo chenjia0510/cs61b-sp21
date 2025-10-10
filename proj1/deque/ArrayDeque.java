@@ -2,7 +2,7 @@ package deque;
 
 import java.util.Iterator;
 
-public class ArrayDeque<T> implements Iterable<T>{
+public class ArrayDeque<T> implements Iterable<T>,Deque<T>{
     private T[] items;
     private int size;
     private int nextFirst;
@@ -50,13 +50,7 @@ public class ArrayDeque<T> implements Iterable<T>{
     }
 
 
-    public boolean isEmpty(){
-    //Returns true if deque is empty, false otherwise.
-        if(size==0){
-            return true;
-        }
-        return false;
-    }
+
     public int size(){
     //Returns the number of items in the deque.
         return size;

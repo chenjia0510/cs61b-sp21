@@ -1,11 +1,10 @@
 package deque;
 
 
-import java.util.Deque;
 import java.util.Iterator;
 import afu.org.checkerframework.checker.igj.qual.I;
 
-public class LinkedListDeque<T> implements Iterable<T> {
+public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
     private int size;
     private ItemNode sentinel;
 
@@ -53,13 +52,7 @@ public class LinkedListDeque<T> implements Iterable<T> {
         size++;
     }
 
-    public boolean isEmpty(){
-        //Returns true if deque is empty, false otherwise.
-        if(size==0){
-            return true;
-        }
-        return false;
-    }
+
 
     public int size(){
         //Returns the number of items in the deque.
