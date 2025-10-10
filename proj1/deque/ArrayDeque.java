@@ -130,10 +130,10 @@ public class ArrayDeque<T> implements Iterable<T>,Deque<T>{
             return false;
 
         }
-        ArrayDeque d2=(ArrayDeque) o;
+        Deque d2=(Deque) o;
         if(d2.size()==this.size()){
             for(int i=0;i<size;i++){
-                if (this.get(i)!=d2.get(i)){
+                if (!this.get(i).equals(d2.get(i))){
                     return false;
                 }
             }
